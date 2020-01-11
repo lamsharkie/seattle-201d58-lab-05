@@ -15,7 +15,7 @@ function sum(a, b) { //eslint-disable-line
 }
 
 // Here is the test for sum(); uncomment it to run it
-//testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -34,7 +34,7 @@ function multiply(a, b) { //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
- testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -51,11 +51,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  var s = sum(a, b)[0];
+  //console.log(s);
+  var sum3 = sum(s,c)[0];
+  //console.log(sum3);
+  var p = multiply(a, b)[0];
+  //console.log(p);
+  var prod3 = multiply(p, c)[0];
+  //console.log(prod3);
 
+  return [sum3, prod3, + a + ' and ' + b + ' and ' + c + ' sum to ' + sum3 + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + prod3 + '.'];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
